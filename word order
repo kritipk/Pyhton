@@ -1,0 +1,15 @@
+num_lines = input()
+list_string = []
+for i in range(int(num_lines)):
+  list_string.append(input())
+
+count = {}
+
+for i in range(len(list_string)):
+  count.setdefault(list_string[i],0)
+  count[list_string[i]] += 1
+
+
+print(len(count))
+for value in count.values():
+  print(value,end=" ")
